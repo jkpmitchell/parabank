@@ -560,6 +560,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <!-- MySQL dependencies -->
+  <dependencies>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.3.0</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <pluginManagement>
