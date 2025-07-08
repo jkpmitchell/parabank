@@ -1,0 +1,29 @@
+name: Run SOAtest Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-soatest:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run SOAtest
+        uses: parasoft/run-soatest-action@1.0.0
+        with:
+          soatestWorkspace: 'soatest'
+          resource: 'Tests'
+          testConfig: 'user://Example Configuration'
+          convertReportToXUnit: true
+
+      - name: Upload SOAtest Reports
+        uses: actions/upload-artifact@v4
+        with:
+            name: SOAtestReports
+            path: reports
