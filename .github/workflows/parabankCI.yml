@@ -26,6 +26,6 @@ jobs:
       - name: Run SOAtest tests
         run: |
           soatestcli -data workspace \
-                     -config "user://MyConfig" \
+                     -config "C:\\GitHub\parabank" \
                      -resource soatest/Tests \
                      -localsettings localsettings.properties
