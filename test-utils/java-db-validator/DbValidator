@@ -1,0 +1,10 @@
+/**
+ * Establishes a connection to the HSQLDB database running on localhost with the database name "parabank".
+ * Uses the default username "sa" and an empty password.
+ *
+ * @see java.sql.DriverManager#getConnection(String, String, String)
+ * @throws SQLException if a database access error occurs or the url is null
+ */
+Connection conn = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/parabank", "sa", "");
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT * FROM account WHERE id = 13344");

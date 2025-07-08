@@ -1,5 +1,7 @@
 name: Build and Test
-on: pull_request
+on: 
+  - push
+  # - pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,3 +22,31 @@ jobs:
       - name: Run tests
         run: |
           pytest tests/
+
+          jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: npm ci && npx playwright install
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile and run DB Validator
+        run: |
+          javac test-utils/java-db-validator/DbValidator.java -cp libs/hsqldb.jar
+          java -cp libs/hsqldb.jar:test-utils/java-db-validator DbValidator

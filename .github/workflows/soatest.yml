@@ -1,8 +1,8 @@
 name: Run SOAtest Tests
 
 on:
-  push:
-    branches: [ main ]
+ # push:
+  #  branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -19,7 +19,7 @@ jobs:
         with:
           soatestWorkspace: 'soatest'
           resource: 'Tests'
-          testConfig: 'builtin://Demo Configuration'
+          testConfig: 'builtin:\\Demo Configuration'
           convertReportToXUnit: true
 
       - name: Upload SOAtest Reports
