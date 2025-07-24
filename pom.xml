@@ -14,17 +14,17 @@
     <maven.compiler.proc>none</maven.compiler.proc>
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
-    <maven-clean-plugin.version>3.4.1</maven-clean-plugin.version>
+    <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
     <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
-    <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
+    <maven-enforcer-plugin.version>3.6.0</maven-enforcer-plugin.version>
     <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
     <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
-    <cargo-maven3-plugin.version>1.10.19</cargo-maven3-plugin.version>
-    <dependency-check-maven.version>12.1.1</dependency-check-maven.version>
+    <cargo-maven3-plugin.version>1.10.20</cargo-maven3-plugin.version>
+    <dependency-check-maven.version>12.1.3</dependency-check-maven.version>
     <soatest-maven-plugin.version>1.0.2</soatest-maven-plugin.version>
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
     <phase.start-container>pre-integration-test</phase.start-container>
@@ -40,8 +40,8 @@
     <jaxb.impl.version>4.0.5</jaxb.impl.version>
     <istack.version>4.2.0</istack.version>
     <joda-time.version>2.14.0</joda-time.version>
-    <activemq.version>6.1.6</activemq.version>
-    <swagger-jaxrs.version>2.2.32</swagger-jaxrs.version>
+    <activemq.version>6.1.7</activemq.version>
+    <swagger-jaxrs.version>2.2.34</swagger-jaxrs.version>
     <!-- Tomcat 10.1 only supports Servlet API 6.0 -->
     <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
     <junit.version>4.13.2</junit.version>
@@ -50,15 +50,15 @@
     <hsqldb.version>2.7.4</hsqldb.version>
     <commons-dbcp2.version>2.13.0</commons-dbcp2.version>
     <aspectjweaver.version>1.9.24</aspectjweaver.version>
-    <jackson.version>2.19.0</jackson.version>
+    <jackson.version>2.19.1</jackson.version>
     <woodstox.version>7.1.1</woodstox.version>
     <slf4j.version>2.0.17</slf4j.version>
-    <log4j.version>2.24.3</log4j.version>
+    <log4j.version>2.25.1</log4j.version>
     <commons-io.version>2.19.0</commons-io.version>
     <commons-codec.version>1.18.0</commons-codec.version>
-    <wiremock.version>3.12.1</wiremock.version>
+    <wiremock.version>3.13.1</wiremock.version>
     <mockito.version>5.18.0</mockito.version>
-    <bytebuddy.version>1.17.5</bytebuddy.version>
+    <bytebuddy.version>1.17.6</bytebuddy.version>
     <cxf.version>4.1.2</cxf.version>
     <cxf.wss4j.version>4.0.0</cxf.wss4j.version>
     <cxf.swagger.version>3.6.3</cxf.swagger.version>
@@ -69,11 +69,11 @@
     <spring.version>6.2.8</spring.version>
     <junitparams.version>1.1.1</junitparams.version>
     <hamcrest.version>3.0</hamcrest.version>
-    <bcprov.version>1.80</bcprov.version>
+    <bcprov.version>1.81</bcprov.version>
     <jquery.version>3.7.1</jquery.version>
     <guava.version>33.4.8-jre</guava.version>
     <snakeyaml.version>2.4</snakeyaml.version>
-    <selenium.version>4.33.0</selenium.version>
+    <selenium.version>4.34.0</selenium.version>
     <angus.version>2.0.3</angus.version>
   </properties>
   <dependencyManagement>
@@ -743,7 +743,7 @@
             <artifactInstaller>
               <groupId>org.apache.tomcat</groupId>
               <artifactId>tomcat</artifactId>
-              <version>10.1.42</version>
+              <version>10.1.43</version>
             </artifactInstaller>
             <timeout>600000</timeout>
           </container>
